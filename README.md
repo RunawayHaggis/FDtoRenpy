@@ -3,7 +3,7 @@ Convert dialogue from Final Draft screenplay to Renpy format.
 
 Disclaimer: I am not a Python dev!  There are probably much better ways to do this, but this way was quick and it does the job :)
 
-##TO USE:
+## TO USE:
 
 `python FDtoRenpy.py YourFinalDraftScript.fdx YourOutputFile.txt`
 
