@@ -5,7 +5,7 @@ Disclaimer: I am not a Python dev!  There are probably much better ways to do th
 
 TO USE:
 
-python FDtoRenpy.py YourFinalDraftScript.fdx YourOutputFile.txt
+`python FDtoRenpy.py YourFinalDraftScript.fdx YourOutputFile.txt`
 
 Ensure there are no spaces in filenames and that the FD script is **not** open in Final Draft.
 
