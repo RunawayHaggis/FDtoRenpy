@@ -5,8 +5,8 @@ Convert dialogue from Final Draft screenplay to Renpy format.
 
 The aim is to quickly convert dialogue written in Final Draft to a format suitable for importing to Renpy.
 
-- Actions are converted to narrator dialogue, so "[ACTION]"
-- Character dialogue is converted to the format [CHARACTER NAME] "[DIALOGUE]"
+- Actions are converted to narrator dialogue, so `"[ACTION]"`
+- Character dialogue is converted to the format `[CHARACTER NAME] "[DIALOGUE]"`
 - Single and double curly quotes are changed to straight quotes in the dialogue and action text only.
 - Everything else in the screenplay is ignored
 
