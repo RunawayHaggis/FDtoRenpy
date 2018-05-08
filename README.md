@@ -11,7 +11,7 @@ The aim is to quickly convert dialogue written in Final Draft to a format suitab
 - Single and double curly quotes are changed to straight quotes in the dialogue and action text only.
 - Everything else in the screenplay is ignored
 
-Output is to a text file. Copy and paste the text file contents into your Renpy script, then press TAB to indent the text you just pasted.
+Output is to a text file with indents.
 
 ## TO USE:
 
