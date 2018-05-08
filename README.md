@@ -20,11 +20,12 @@ Output is to a text file with indents.
 
 Ensure there are no spaces in filenames and that the FD script is **not** open in Final Draft.
 
-## Potential gotchas
+## Potential gotchas:
 
 Final Draft sometimes adds a wiggly line underneath a word it doesn't know.  That formatting appears in the XML too and will affect the conversion, so it's best to get rid of it first. You can usually do that by either confirming the spelling of the word, or just highlighting the whole block and reapplying the style (e.g. transition, dialogue).
 
-## Disclaimers
+## Disclaimers:
+
 I am not a Python dev!  There are probably much better ways to do this, but this way was quick and it does the job :)
 
 Also, please be aware that I have only done very limited testing on this and I am using Final Draft 10.
