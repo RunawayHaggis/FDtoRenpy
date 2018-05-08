@@ -27,13 +27,31 @@ def main():
                 file.write(theAction)
                 file.write('"')
                 file.write('\n')
+                
         elif stuff.attrib['Type'] == "General":
             theLabel = stuff.find('Text').text
             if theLabel != None:
+                file.write('\n')
                 file.write("label ")
                 theLabel = theLabel.replace(" ","_")
+                theLabel = theLabel.replace("“","")
+                theLabel = theLabel.replace("”","")
+                theLabel = theLabel.replace("’","")
                 file.write(theLabel)
                 file.write(":\n")
+
+        elif stuff.attrib['Type'] == "Transition":
+            theScene = stuff.find('Text').text
+            if theScene != None:
+                file.write('\n')
+                file.write("\t")
+                file.write("scene ")
+                theScene = theScene.replace('“','"')
+                theScene = theScene.replace('”','"')
+                theScene = theScene.replace("’","'")
+                file.write(theScene.lower())
+                file.write("\n\n")
+                
         elif stuff.attrib['Type'] == "Character":
             file.write("\t")
             file.write(stuff.find('Text').text)
