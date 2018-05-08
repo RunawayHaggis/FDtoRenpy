@@ -7,7 +7,7 @@ The aim is to quickly convert dialogue written in Final Draft to a format suitab
 
 - Actions are converted to narrator dialogue, so "[ACTION]"
 - Character dialogue is converted to the format [CHARACTER NAME] "[DIALOGUE]"
-- Nothing else is changed, so watch out for 'smart' apostrophes etc.
+- Single and double curly quotes are changed to straight quotes in the dialogue section only.
 - Everything else in the screenplay is ignored
 
 Output is to a text file. Copy and paste the text file contents into your Renpy script, then press TAB to indent the text you just pasted.

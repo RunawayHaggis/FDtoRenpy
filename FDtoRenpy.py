@@ -25,7 +25,11 @@ def main():
             file.write(" ")
         elif stuff.attrib['Type'] == "Dialogue":
             file.write('"')
-            file.write(stuff.find('Text').text)
+            theDialogue = stuff.find('Text').text
+            theDialogue = theDialogue.replace('“','"')
+            theDialogue = theDialogue.replace('”','"')
+            theDialogue = theDialogue.replace("’","'")
+            file.write(theDialogue)
             file.write('"')
             file.write('\n')
         
