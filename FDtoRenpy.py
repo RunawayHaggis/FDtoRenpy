@@ -16,25 +16,38 @@ def main():
     for stuff in root.iterfind('Content/Paragraph'):
         
         if stuff.attrib['Type'] == "Action":
-            file.write('"')
             theAction = stuff.find('Text').text
-            theAction = theAction.replace('“','"')
-            theAction = theAction.replace('”','"')
-            theAction = theAction.replace("’","'")
-            file.write(theAction)
-            file.write('"')
-            file.write('\n')
+            
+            if theAction != None:
+                file.write("\t")
+                file.write('"')
+                theAction = theAction.replace('“','"')
+                theAction = theAction.replace('”','"')
+                theAction = theAction.replace("’","'")
+                file.write(theAction)
+                file.write('"')
+                file.write('\n')
+        elif stuff.attrib['Type'] == "General":
+            theLabel = stuff.find('Text').text
+            if theLabel != None:
+                file.write("label ")
+                theLabel = theLabel.replace(" ","_")
+                file.write(theLabel)
+                file.write(":\n")
         elif stuff.attrib['Type'] == "Character":
+            file.write("\t")
             file.write(stuff.find('Text').text)
             file.write(" ")
-        elif stuff.attrib['Type'] == "Dialogue":
-            file.write('"')
+            
+        elif stuff.attrib['Type'] == "Dialogue": 
             theDialogue = stuff.find('Text').text
-            theDialogue = theDialogue.replace('“','"')
-            theDialogue = theDialogue.replace('”','"')
-            theDialogue = theDialogue.replace("’","'")
-            file.write(theDialogue)
-            file.write('"')
+            if theDialogue!= None:
+                file.write('"')
+                theDialogue = theDialogue.replace('“','"')
+                theDialogue = theDialogue.replace('”','"')
+                theDialogue = theDialogue.replace("’","'")
+                file.write(theDialogue)
+                file.write('"')
             file.write('\n')
         
     file.close()

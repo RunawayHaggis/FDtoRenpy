@@ -7,6 +7,7 @@ The aim is to quickly convert dialogue written in Final Draft to a format suitab
 
 - Actions are converted to narrator dialogue, so `"[ACTION]"`
 - Character dialogue is converted to the format `[CHARACTER NAME] "[DIALOGUE]"`
+- Final Draft *General* type is converted to Renpy Label. Spaces are converted to underscores.  So a General of `This is a label` would become `label This_is_a_label:`
 - Single and double curly quotes are changed to straight quotes in the dialogue and action text only.
 - Everything else in the screenplay is ignored
 
