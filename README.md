@@ -22,4 +22,4 @@ Ensure there are no spaces in filenames and that the FD script is **not** open i
 ## DISCLAIMERS
 I am not a Python dev!  There are probably much better ways to do this, but this way was quick and it does the job :)
 
-Also, please be aware that I have only done very limited testing on this.
+Also, please be aware that I have only done very limited testing on this and I am using Final Draft 10.
