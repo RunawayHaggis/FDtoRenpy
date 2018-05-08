@@ -17,7 +17,11 @@ def main():
         
         if stuff.attrib['Type'] == "Action":
             file.write('"')
-            file.write(stuff.find('Text').text)
+            theAction = stuff.find('Text').text
+            theAction = theAction.replace('“','"')
+            theAction = theAction.replace('”','"')
+            theAction = theAction.replace("’","'")
+            file.write(theAction)
             file.write('"')
             file.write('\n')
         elif stuff.attrib['Type'] == "Character":
