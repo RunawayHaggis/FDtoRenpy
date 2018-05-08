@@ -1,8 +1,6 @@
 # FDtoRenpy
 Convert dialogue from Final Draft screenplay to Renpy format.
 
-Disclaimer: I am not a Python dev!  There are probably much better ways to do this, but this way was quick and it does the job :)
-
 ## TO USE:
 
 `python FDtoRenpy.py YourFinalDraftScript.fdx YourOutputFile.txt`
@@ -16,3 +14,5 @@ The aim is to quickly convert dialogue written in Final Draft to a format suitab
 - Everything else in the screenplay is ignored
 
 Output is to a text file. Copy and paste the text file contents into your Renpy script, then press TAB to indent the whole pasted thing.
+
+**Disclaimer: I am not a Python dev!  There are probably much better ways to do this, but this way was quick and it does the job :)**
