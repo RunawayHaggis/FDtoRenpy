@@ -29,3 +29,6 @@ Final Draft sometimes adds a wiggly line underneath a word it doesn't know.  Tha
 I am not a Python dev!  There are probably much better ways to do this, but this way was quick and it does the job :)
 
 Also, please be aware that I have only done very limited testing on this and I am using Final Draft 10.
+
+<br>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
