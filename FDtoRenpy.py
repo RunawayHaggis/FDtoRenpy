@@ -1,3 +1,5 @@
+#FDtoRenpy is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License. https://github.com/RunawayHaggis/FDtoRenpy
+
 import xml.etree.ElementTree as ET
 
 def main():
