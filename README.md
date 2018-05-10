@@ -9,6 +9,7 @@ The aim is to quickly convert dialogue written in Final Draft to a format suitab
 - Character and Dialogue are converted to the format `[CHARACTER] "[DIALOGUE]"`
 - Final Draft *General* type is converted to Renpy Label. Spaces are converted to underscores.  So a General of `This is a label` would become `label This_is_a_label:`
 - Transition type is converted to scene.  So a transition that reads `bg office` would become `scene bg office` (automatically converted to lower case)
+- Parenthetical is converted to a comment.  So a parenthetical that reads `(Remember to do xyz here)` comes `# Remember to do xyz here`
 - Single and double curly quotes are changed to straight quotes in the dialogue and action text only.
 - Everything else in the screenplay is ignored
 

@@ -57,6 +57,16 @@ def main():
             file.write("\t")
             file.write(stuff.find('Text').text)
             file.write(" ")
+
+        elif stuff.attrib['Type'] == "Parenthetical":
+            theComment = stuff.find('Text').text
+            if theComment != None:
+                file.write("\n")
+                file.write("# ")
+                theComment = theComment.replace('(','')
+                theComment = theComment.replace(')','')
+                file.write(theComment)
+                file.write("\n")
             
         elif stuff.attrib['Type'] == "Dialogue": 
             theDialogue = stuff.find('Text').text
