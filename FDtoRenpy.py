@@ -40,12 +40,11 @@ def main():
                 theLabel = theLabel.replace("”","")
                 theLabel = theLabel.replace("’","")
                 file.write(theLabel)
-                file.write(":\n")
+                file.write(":\n\n")
 
         elif stuff.attrib['Type'] == "Transition":
             theScene = stuff.find('Text').text
             if theScene != None:
-                file.write('\n')
                 file.write("\t")
                 file.write("scene ")
                 theScene = theScene.replace('“','"')
