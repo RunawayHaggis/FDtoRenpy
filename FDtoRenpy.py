@@ -18,9 +18,13 @@ def main():
     for stuff in root.iterfind('Content/Paragraph'):
         
         if stuff.attrib['Type'] == "Action":
-            theAction = stuff.find('Text').text
-            
-            if theAction != None:
+
+            if hasattr(stuff.find('Text'), 'text'):
+                theAction = stuff.find('Text').text
+            else:
+                theAction=""
+                
+            if theAction != "":
                 file.write("\t")
                 file.write('"')
                 theAction = theAction.replace('“','"')
@@ -31,8 +35,13 @@ def main():
                 file.write('\n')
                 
         elif stuff.attrib['Type'] == "General":
-            theLabel = stuff.find('Text').text
-            if theLabel != None:
+
+            if hasattr(stuff.find('Text'), 'text'):
+                theLabel = stuff.find('Text').text
+            else:
+                theLabel=""
+            
+            if theLabel != "":
                 file.write('\n')
                 file.write("label ")
                 theLabel = theLabel.replace(" ","_")
@@ -43,8 +52,13 @@ def main():
                 file.write(":\n\n")
 
         elif stuff.attrib['Type'] == "Transition":
-            theScene = stuff.find('Text').text
-            if theScene != None:
+
+            if hasattr(stuff.find('Text'), 'text'):
+                theScene = stuff.find('Text').text
+            else:
+                theScene=""
+            
+            if theScene != "":
                 file.write("\t")
                 file.write("scene ")
                 theScene = theScene.replace('“','"')
@@ -54,13 +68,23 @@ def main():
                 file.write("\n\n")
                 
         elif stuff.attrib['Type'] == "Character":
-            file.write("\t")
-            file.write(stuff.find('Text').text)
-            file.write(" ")
+            if hasattr(stuff.find('Text'), 'text'):
+                theCharacter = stuff.find('Text').text
+            else:
+                theCharacter=""
+
+            if theCharacter != "":
+                file.write("\t")
+                file.write(theCharacter)
+                file.write(" ")
 
         elif stuff.attrib['Type'] == "Parenthetical":
-            theComment = stuff.find('Text').text
-            if theComment != None:
+            if hasattr(stuff.find('Text'), 'text'):
+                theComment = stuff.find('Text').text
+            else:
+                theComment=""
+
+            if theComment != "":
                 file.write("\n")
                 file.write("# ")
                 theComment = theComment.replace('(','')
@@ -68,9 +92,13 @@ def main():
                 file.write(theComment)
                 file.write("\n")
             
-        elif stuff.attrib['Type'] == "Dialogue": 
-            theDialogue = stuff.find('Text').text
-            if theDialogue!= None:
+        elif stuff.attrib['Type'] == "Dialogue":
+            if hasattr(stuff.find('Text'), 'text'):
+                theDialogue = stuff.find('Text').text
+            else:
+                theDialogue=""
+           
+            if theDialogue!= "":
                 file.write('"')
                 theDialogue = theDialogue.replace('“','"')
                 theDialogue = theDialogue.replace('”','"')
